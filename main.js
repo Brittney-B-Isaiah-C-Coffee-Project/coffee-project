@@ -1,5 +1,12 @@
 "use strict"
 
+/**
+// TO DO:
+// sort coffees by id in ascending order
+ // add functionality to search through the coffees by name and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
+ // Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
+ */
+
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
