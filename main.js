@@ -25,6 +25,9 @@ function updateCoffees(e) {
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
+        if(selectedRoast === "All Roasts"){
+            filteredCoffees.push(coffee);
+        } else
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
@@ -67,6 +70,9 @@ function searchCoffee(){
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
+        if((selectedRoast === "All Roasts") && (coffee.name.toLowerCase().indexOf(searchText2.toLowerCase()) != -1)) {
+            filteredCoffees.push(coffee);
+        } else
         if ((coffee.roast === selectedRoast) && (coffee.name.toLowerCase().indexOf(searchText2.toLowerCase()) != -1)) {
             filteredCoffees.push(coffee);
         }
