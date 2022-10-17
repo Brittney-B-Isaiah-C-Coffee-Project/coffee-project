@@ -59,11 +59,15 @@ let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 let searchText = document.querySelector('#search')
+let addNewFlavor = document.querySelector('#add2')
+let newCoffeeName = document.querySelector('#coffeeName')
+let roastType = document.querySelector('#roastType')
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 searchText.addEventListener('keyup', searchCoffee);
+addNewFlavor.addEventListener('click', addNewCoffee);
 
 function searchCoffee(){
     let searchText2 = searchText.value;
@@ -79,3 +83,12 @@ function searchCoffee(){
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+function addNewCoffee(e) {
+    e.preventDefault();
+    let newFlavor = newCoffeeName.value;
+    let newFlavorType = roastType.value;
+    let newId = coffees.length + 1;
+         coffees.push({id: newId, name: newFlavor, roast: newFlavorType});
+            searchCoffee();
+ }
