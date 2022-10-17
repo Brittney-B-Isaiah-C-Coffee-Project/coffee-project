@@ -8,7 +8,7 @@
  */
 
 function renderCoffee(coffee) {
-    let html = '<div class="coffee"> <h3 class="d-inline">'+ coffee.name + '</h3> <p class="d-inline text-secondary">' + coffee.roast + '</p></div> <br>';
+    let html = '<div class="col-6 d-inline coffee"> <h3 class="d-inline">'+ coffee.name + '</h3> <p class="d-inline text-secondary">' + coffee.roast + '</p></div>';
     return html;
 }
 
