@@ -2,19 +2,19 @@
 
 /**
 // TO DO:
-// sort coffees by id in ascending order✅
- // add functionality to search through the coffees by name and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
- // Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
+// ✅ sort coffees by id in ascending order
+// ✅ add functionality to search through the coffees by name and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
+// ✅ Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
  */
 
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">'+ coffee.name + ' ' + coffee.roast + '</div> <br>';
+    let html = '<div class="coffee"> <h3 class="d-inline">'+ coffee.name + '</h3> <p class="d-inline text-secondary">' + coffee.roast + '</p></div> <br>';
     return html;
 }
 
 function renderCoffees(coffees) {
     let html = '';
-    for(let i = 0 ;i <= coffees.length - 1 ; i++) {
+    for(let i = 0 ;i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -31,6 +31,8 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+
 
 //from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
@@ -53,11 +55,21 @@ let coffees = [
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
+let searchText = document.querySelector('#search')
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+searchText.addEventListener('keyup', searchCoffee);
 
-
-
-
+function searchCoffee(){
+    let searchText2 = searchText.value;
+    let selectedRoast = roastSelection.value;
+    let filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if ((coffee.roast === selectedRoast) && (coffee.name.toLowerCase().indexOf(searchText2.toLowerCase()) != -1)) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}

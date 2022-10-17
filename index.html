@@ -8,20 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="mw-100">
-<div class="container text-center">
+<div class="container text-center m-0 mw-100">
     <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
 
-    <!-- Update tables with divs-->
+
+    <!-- ✅ Update tables with divs-->
     <!--    divs contain heading of coffee name-->
     <!--    divs contain type of roast in a paragraph-->
     <!--    Do not display ids-->
@@ -40,11 +32,25 @@
                <div class="col-6">
                    FLAVORS OF THE MONTH
                     <div class="text-break m-5" id="coffees"></div>
-                </div>
-                <div class="col-6">
-                    Selectors Column
-                <div>
-                </div>
+               </div>
+               <div class="col-6">
+                   SEARCH
+                   <div>
+                       <form>
+                           <label for="roast-selection"></label>
+                           <select id="roast-selection">
+                               <option>light</option>
+                               <option>medium</option>
+                               <option>dark</option>
+                           </select>
+                           <input id="submit" type="submit" />
+                       </form>
+                   </div>
+                   <div>
+                       <input type="text" id="search" placeholder="Search coffee" />
+                       <div id="results"></div>
+                   </div>
+               </div>
               </div>
             </div>
         </div>
