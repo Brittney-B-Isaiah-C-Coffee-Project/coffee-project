@@ -2,7 +2,7 @@
 
 /**
 // TO DO:
-// sort coffees by id in ascending order
+// sort coffees by id in ascending order✅
  // add functionality to search through the coffees by name and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
  // Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
  */
@@ -32,7 +32,7 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+//from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -57,3 +57,7 @@ let roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+
+
