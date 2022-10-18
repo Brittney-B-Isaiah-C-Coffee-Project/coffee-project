@@ -5,25 +5,30 @@
 // ✅ sort coffees by id in ascending order
 // ✅ add functionality to search through the coffees by name and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
 // ✅ Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
- */
+// ✅Make your name search case-insensitive
+// ✅Allow the user to add new coffees to the page
+// ✅Use localStorage to persist the data
+*/
 
 function renderCoffee(coffee) {
-    let html = '<div class="col-6 d-inline coffee mb-2"> <h4 class="d-inline">'+ coffee.name + '</h4> <p class="d-inline text-secondary coffeeP">' + coffee.roast + '</p></div>';
+    let roast = coffee.roast
+    let html = ''
+    if (roast === 'light'){
+        html = '<div class="col-6 d-inline coffee mb-2"> <h1 class="d-inline">'+ coffee.name + '</h1> <p class="d-inline lightP">' + coffee.roast + '</p></div>';
+    } else if (roast === 'medium'){
+        html = '<div class="col-6 d-inline coffee mb-2"> <h1 class="d-inline">'+ coffee.name + '</h1> <p class="d-inline mediumP">' + coffee.roast + '</p></div>';
+    } else if (roast === 'dark') {
+        html = '<div class="col-6 d-inline coffee mb-2"> <h1 class="d-inline">'+ coffee.name + '</h1> <p class="d-inline darkP">' + coffee.roast + '</p></div>';
+    }
     return html;
 }
-let coffeeClass = document.getElementsByClassName("coffeeP");
-// function coffeeRoastStyle(coffeeClass){
-//     coffeeClass.forEach(function(coffee){
-//         if(p.innerText === 'light'){
-//             p.style.color = 'light brown'
-//         }
-//     })
-// }
+
 function renderCoffees(coffees) {
     let html = '';
     for(let i = 0 ;i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
+    window.localStorage.setItem('coffees', JSON.stringify(coffees));
     return html;
 }
 
@@ -45,7 +50,10 @@ function updateCoffees(e) {
 
 
 //from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-let coffees = [
+
+
+let coffees =
+    [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -61,7 +69,8 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
+if (window.localStorage.getItem('coffees') != null){
+    coffees = JSON.parse(window.localStorage.getItem('coffees'))}
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
@@ -81,10 +90,10 @@ function searchCoffee(){
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if((selectedRoast === "all") && (coffee.name.toLowerCase().indexOf(searchText2.toLowerCase()) != -1)) {
+        if((selectedRoast === "all") && (coffee.name.toLowerCase().indexOf(searchText2.toLowerCase()) !== -1)) {
             filteredCoffees.push(coffee);
         } else
-        if ((coffee.roast === selectedRoast) && (coffee.name.toLowerCase().indexOf(searchText2.toLowerCase()) != -1)) {
+        if ((coffee.roast === selectedRoast) && (coffee.name.toLowerCase().indexOf(searchText2.toLowerCase()) !== -1)) {
             filteredCoffees.push(coffee);
         }
     });

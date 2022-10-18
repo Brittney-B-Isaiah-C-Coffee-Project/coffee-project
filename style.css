@@ -40,8 +40,12 @@ a {
     transition: background-size 400ms;
 }
 #anchorCup {
-    margin-top: 400px;
-    margin-left: 20px;
+    position: relative;
+    margin-top: 40px;
+}
+#anchorCupImg {
+    width: 30px;
+    height: 30px;
 }
 h1 {
     font-weight: 700;
@@ -73,4 +77,16 @@ p {
     bottom: 8px;
     left: 50%;
     transform: translate(-50%);
+}
+.lightP {
+    color: #C4A484
+}
+.mediumP {
+    color: #80604d
+}
+.darkP {
+    color: #5C4033
+}
+.option {
+    font-size: 40px;
 }
