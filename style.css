@@ -15,3 +15,10 @@ select {
     height: 38px;
     border-radius: 3px;
 }
+a:hover {
+    background-color: blue;
+}
+#anchorCup {
+    margin-top: 400px;
+    margin-left: 20px;
+}
