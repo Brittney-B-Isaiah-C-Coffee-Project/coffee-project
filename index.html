@@ -15,7 +15,7 @@
 <div class="container text-center m-0 mw-100">
     <div class="container mw-100"  id="header-container">
     <h1 class="header-text" id="header-h1">Rocky Mountain Coffee Shop</h1>
-        <p class="header-text" id="header-p">Try our reward program! Every 5 points gets a 5% OFF discount on any seasonal flavor!</p>
+        <p class="header-text fs-3" id="header-p">Try our rewards program! Every 5 points gets you a 5% OFF discount on any seasonal flavor!</p>
         <img style="width:100%" src="icons/pexels-photo-417074.jpeg">
     </div>
     <hr>
@@ -23,18 +23,19 @@
     <!--   ✅ divs contain heading of coffee name-->
     <!--   ✅ divs contain type of roast in a paragraph-->
     <!--   ✅ Do not display ids-->
+    <h1 class="fs-4">OPEN HOURS: 8AM -5PM <br>"A bad day with coffee is better than a good day without it."</h1>
         <div class="m-5 inline-block">
             <div class="row">
 <!--           display coffees section-->
-               <div class="col-6 border">
-                    <div class="text-break row" id="coffees"></div>
+               <div class="col-6 border shadow-lg p-3 mb-5 bg-body rounded">
+                   <div class="text-break row" id="coffees"></div>
                </div>
                <div class="col-6">
 <!--               search coffee section-->
                    <div>
                        <form>
                            <div class="d-grid mt-2">
-                               <label for="roast-selection" class="text-start fw-bold">Roast</label>
+                               <label for="roast-selection" class="text-start fw-bold fs-3"><a>Roast</a></label>
                            </div>
                            <div class="d-grid mt-2">
                                <select id="roast-selection">
@@ -45,13 +46,13 @@
                                </select>
                            </div>
                            <div class="d-grid mt-2">
-                               <label for="submit" class="text-start fw-bold">Coffee Name</label>
+                               <label for="submit" class="text-start fw-bold fs-3"><a>Coffee Name</a></label>
                            </div>
-                           <div class="d-grid mt-2">
+                           <div class="d-grid mt-2 ">
                                <input type="text" id="search"/>
                            </div>
                            <div class="d-grid mt-3">
-                               <input class ="btn btn-primary" id="submit" type="submit" />
+                               <input class ="btn btn-primary " id="submit" type="submit" />
                            </div>
                        </form>
                    </div>
@@ -60,10 +61,10 @@
                    <div>
                       <form>
                           <div class="d-grid my-3">
-                              <h2>Add a Coffee</h2>
+                              <h2>Add a <strong>NEW</strong> flavor of your choice! ⬇️</h2>
                           </div>
                           <div class="d-grid mt-2">
-                              <label for="roastType" class="text-start fw-bold">Roast</label>
+                              <label for="roastType" class="text-start fw-bold fs-3"><a>Roast</a></label>
                           </div>
                           <div class="d-grid mt-2">
                               <select id="roastType">
@@ -73,7 +74,7 @@
                               </select>
                           </div>
                           <div class="d-grid mt-2">
-                              <label for="coffeeName" class="text-start fw-bold">Name</label>
+                              <label for="coffeeName" class="text-start fw-bold fs-3"><a>New Coffee</a></label>
                           </div>
                           <div class="d-grid mt-2">
                               <input type="text" id="coffeeName"/>
@@ -87,23 +88,23 @@
               </div>
             </div>
         </div>
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="icons/pexels-photo-266755.webp" class="d-block w-100 h-300" alt="...">
+            <img src="icons/pexels-photo-266755.webp" class="d-block w-100 h-300" alt="coffee1">
         </div>
         <div class="carousel-item">
-            <img src="icons/pexels-photo-5480759.jpeg" class="d-block w-100 h-300" alt="...">
+            <img src="icons/pexels-photo-5480759.jpeg" class="d-block w-100 h-300" alt="coffee closeup">
         </div>
         <div class="carousel-item">
-            <img src="icons/pexels-photo-1627933.jpeg" class="d-block w-100 h-300" alt="...">
+            <img src="icons/pexels-photo-1627933.jpeg" class="d-block w-100 h-300" alt="coffee love">
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
@@ -113,10 +114,6 @@
         <img src="icons/cup-hot.svg">
     </a>
 </div>
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </div>
