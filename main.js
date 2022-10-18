@@ -8,10 +8,17 @@
  */
 
 function renderCoffee(coffee) {
-    let html = '<div class="col-6 d-inline coffee mb-2"> <h4 class="d-inline">'+ coffee.name + '</h4> <p class="d-inline text-secondary">' + coffee.roast + '</p></div>';
+    let html = '<div class="col-6 d-inline coffee mb-2"> <h4 class="d-inline">'+ coffee.name + '</h4> <p class="d-inline text-secondary coffeeP">' + coffee.roast + '</p></div>';
     return html;
 }
-
+let coffeeClass = document.getElementsByClassName("coffeeP");
+// function coffeeRoastStyle(coffeeClass){
+//     coffeeClass.forEach(function(coffee){
+//         if(p.innerText === 'light'){
+//             p.style.color = 'light brown'
+//         }
+//     })
+// }
 function renderCoffees(coffees) {
     let html = '';
     for(let i = 0 ;i <= coffees.length - 1; i++) {
@@ -92,3 +99,4 @@ function addNewCoffee(e) {
          coffees.push({id: newId, name: newFlavor, roast: newFlavorType});
             searchCoffee();
  }
+
