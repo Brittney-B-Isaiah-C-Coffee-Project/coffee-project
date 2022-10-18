@@ -14,11 +14,11 @@ function renderCoffee(coffee) {
     let roast = coffee.roast
     let html = ''
     if (roast === 'light'){
-        html = '<div class="col-6 d-inline coffee mb-2"> <h1 class="d-inline">'+ coffee.name + '</h1> <p class="d-inline lightP">' + coffee.roast + '</p></div>';
+        html = '<div class="col-lg-6 d-inline coffee mb-2"> <h1 class="d-inline">'+ coffee.name + '</h1> <p class="d-inline lightP">' + coffee.roast + '</p></div>';
     } else if (roast === 'medium'){
-        html = '<div class="col-6 d-inline coffee mb-2"> <h1 class="d-inline">'+ coffee.name + '</h1> <p class="d-inline mediumP">' + coffee.roast + '</p></div>';
+        html = '<div class="col-lg-6 d-inline coffee mb-2"> <h1 class="d-inline">'+ coffee.name + '</h1> <p class="d-inline mediumP">' + coffee.roast + '</p></div>';
     } else if (roast === 'dark') {
-        html = '<div class="col-6 d-inline coffee mb-2"> <h1 class="d-inline">'+ coffee.name + '</h1> <p class="d-inline darkP">' + coffee.roast + '</p></div>';
+        html = '<div class="col-lg-6 d-inline coffee mb-2"> <h1 class="d-inline">'+ coffee.name + '</h1> <p class="d-inline darkP">' + coffee.roast + '</p></div>';
     }
     return html;
 }

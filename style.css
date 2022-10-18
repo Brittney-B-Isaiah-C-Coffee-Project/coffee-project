@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -54,7 +55,7 @@ h1 {
 }
 body {
     font-family: 'Amatic SC', cursive;
-    background: whitesmoke linear-gradient(45deg,lightblue,white);
+    background: whitesmoke linear-gradient(45deg,deepskyblue,white);
 }
 p {
     font-size: 20px;
