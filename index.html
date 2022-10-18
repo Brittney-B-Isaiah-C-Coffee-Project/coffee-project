@@ -11,44 +11,70 @@
 <div class="container text-center m-0 mw-100">
     <h1>Coffee!</h1>
     <hr>
-    <!-- ✅ Update tables with divs-->
-    <!--  ✅  divs contain heading of coffee name-->
+    <!--   ✅ Update tables with divs-->
+    <!--   ✅ divs contain heading of coffee name-->
     <!--   ✅ divs contain type of roast in a paragraph-->
     <!--   ✅ Do not display ids-->
-        <div class="m-5 inline-block border">
+        <div class="m-5 inline-block">
             <div class="row">
+<!--           display coffees section-->
                <div class="col-6">
                     <div class="text-break row" id="coffees"></div>
                </div>
                <div class="col-6">
+<!--               search coffee section-->
                    <div>
                        <form>
-                           <label for="roast-selection"></label>
-                           <select id="roast-selection">
-                               <option>All Roasts</option>
-                               <option>light</option>
-                               <option>medium</option>
-                               <option>dark</option>
-                           </select>
-                           <input class ="btn btn-primary" id="submit" type="submit" />
+                           <div class="d-grid mt-2">
+                               <label for="roast-selection" class="text-start fw-bold">Roast</label>
+                           </div>
+                           <div class="d-grid mt-2">
+                               <select id="roast-selection">
+                                   <option>all</option>
+                                   <option>light</option>
+                                   <option>medium</option>
+                                   <option>dark</option>
+                               </select>
+                           </div>
+                           <div class="d-grid mt-2">
+                               <label for="submit" class="text-start fw-bold">Coffee Name</label>
+                           </div>
+                           <div class="d-grid mt-2">
+                               <input type="text" id="search"/>
+                           </div>
+                           <div class="d-grid mt-3">
+                               <input class ="btn btn-primary" id="submit" type="submit" />
+                           </div>
                        </form>
                    </div>
+                   <hr>
+<!--              add a coffee section-->
                    <div>
-                       <input type="text" id="search" placeholder="Search coffee" />
-                       <div id="results"></div>
+                      <form>
+                          <div class="d-grid my-3">
+                              <h2>Add a Coffee</h2>
+                          </div>
+                          <div class="d-grid mt-2">
+                              <label for="roastType" class="text-start fw-bold">Roast</label>
+                          </div>
+                          <div class="d-grid mt-2">
+                              <select id="roastType">
+                                  <option>light</option>
+                                  <option>medium</option>
+                                  <option>dark</option>
+                              </select>
+                          </div>
+                          <div class="d-grid mt-2">
+                              <label for="coffeeName" class="text-start fw-bold">Name</label>
+                          </div>
+                          <div class="d-grid mt-2">
+                              <input type="text" id="coffeeName"/>
+                          </div>
+                          <div class="d-grid mt-3">
+                              <input class="btn btn-primary" id="add2" type="submit" />
+                          </div>
+                      </form>
                    </div>
-                  <form>
-                      <p class="mt-5" >ADD NEW FLAVOR</p>
-                   <div>
-                       <input type="text" id="coffeeName" placeholder="Add a new flavor" />
-                       <select id="roastType">
-                           <option>light</option>
-                           <option>medium</option>
-                           <option>dark</option>
-                       </select>
-                       <input class="btn btn-primary" id="add2" type="submit" />
-                   </div>
-                  </form>
                </div>
               </div>
             </div>

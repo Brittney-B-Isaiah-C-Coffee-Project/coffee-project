@@ -8,7 +8,7 @@
  */
 
 function renderCoffee(coffee) {
-    let html = '<div class="col-6 d-inline coffee"> <h3 class="d-inline">'+ coffee.name + '</h3> <p class="d-inline text-secondary">' + coffee.roast + '</p></div>';
+    let html = '<div class="col-6 d-inline coffee mb-2"> <h4 class="d-inline">'+ coffee.name + '</h4> <p class="d-inline text-secondary">' + coffee.roast + '</p></div>';
     return html;
 }
 
@@ -25,7 +25,7 @@ function updateCoffees(e) {
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if(selectedRoast === "All Roasts"){
+        if(selectedRoast === "all"){
             filteredCoffees.push(coffee);
         } else
         if (coffee.roast === selectedRoast) {
@@ -74,7 +74,7 @@ function searchCoffee(){
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if((selectedRoast === "All Roasts") && (coffee.name.toLowerCase().indexOf(searchText2.toLowerCase()) != -1)) {
+        if((selectedRoast === "all") && (coffee.name.toLowerCase().indexOf(searchText2.toLowerCase()) != -1)) {
             filteredCoffees.push(coffee);
         } else
         if ((coffee.roast === selectedRoast) && (coffee.name.toLowerCase().indexOf(searchText2.toLowerCase()) != -1)) {
