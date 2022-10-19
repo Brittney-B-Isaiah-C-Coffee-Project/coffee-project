@@ -28,7 +28,7 @@ function renderCoffees(coffees) {
     for(let i = 0 ;i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
-    window.localStorage.setItem('coffees', JSON.stringify(coffees));
+
     return html;
 }
 
@@ -105,7 +105,8 @@ function addNewCoffee(e) {
     let newFlavor = newCoffeeName.value;
     let newFlavorType = roastType.value;
     let newId = coffees.length + 1;
-         coffees.push({id: newId, name: newFlavor, roast: newFlavorType});
-            searchCoffee();
+    coffees.push({id: newId, name: newFlavor, roast: newFlavorType});
+    window.localStorage.setItem('coffees', JSON.stringify(coffees));
+    searchCoffee();
  }
 
